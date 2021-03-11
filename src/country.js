@@ -7,7 +7,7 @@ const CountryStyled = styled.div`
   overflow: hidden;
   box-shadow: 0 0 7px 2px rgba(0,0,0,.05);
   img {
-    max-width: 100%;
+    width: 100%;
     height: 160px;
   }
   .details {
@@ -35,7 +35,7 @@ function Country({
 }) {
   return (
     <CountryStyled>
-      <img src={flag} alt="" />
+      <img loading="lazy" src={flag} alt="" />
       <div className="details">
         <h2>{name}</h2>
         <p><strong>Population: </strong>{population}</p>
